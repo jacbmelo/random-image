@@ -16,7 +16,7 @@
     getUrl:function() {
       var url;
       var jqxhr = $.getJSON('data.json').done(function(data) {
-        url = data[Math.floor(Math.random() * data.length)];
+        this.url = data[Math.floor(Math.random() * data.length)];
       }).fail(function(jqXHR, textStatus, errorThrown) {
         console.log(jqXHR);
         console.log(textStatus);
