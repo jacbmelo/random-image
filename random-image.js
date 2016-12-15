@@ -17,13 +17,13 @@
     
     getUrl:function() {
       var jqxhr = $.getJSON('data.json').done(function(data) {
-        this.url = data[Math.floor(Math.random() * data.length)];
+        url = data[Math.floor(Math.random() * data.length)];
       }).fail(function(jqXHR, textStatus, errorThrown) {
         console.log(jqXHR);
         console.log(textStatus);
         console.log(errorThrown);
       }).always(function() {});
-      return this.url;
+      return url;
     }
   }
 
