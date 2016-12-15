@@ -9,20 +9,11 @@
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     
+    <script src="random-image.js"></script>
     <script>
-      
-      var jqxhr = $.getJSON('data.json').done(function(data) {
-        console.log(data);
-        var url = data[Math.floor(Math.random() * data.length)];
-        console.log('Redirecting to ' + url + '...');
-        window.location.href = url;
-      }).fail(function(jqXHR, textStatus, errorThrown) {
-        console.log(jqXHR);
-        console.log(textStatus);
-        console.log(errorThrown);
-      }).always(function() {
-      });
-      
+      var url = randomImage.getUrl();
+      console.log('Redirecting to ' + url + '...');
+      window.location.href = url;
     </script>
   </head>
 </html>
