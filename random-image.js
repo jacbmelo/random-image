@@ -7,7 +7,7 @@
     module.exports = factory(require('randomImage'));
   } else {
     // Browser globals (Note: root is window)
-    root.returnExports = factory(root.randomImage);
+    root.randomImage = factory(root.randomImage);
   }
 }(this, function (randomImage) {
   // Methods
