@@ -13,7 +13,7 @@
   
   // Methods
   var RandomImage = {
-    url: ,
+    url: undefined,
     
     getUrl:function() {
       var jqxhr = $.getJSON('data.json').done(function(data) {
