@@ -11,13 +11,14 @@
     
     <script src="random-image.js"></script>
     <script>
-      var url = RandomImage.getUrl();
-      if (typeof url === 'undefined') {
-        console.log('Image URL undefined!');
-      } else {
-        console.log('Redirecting to ' + url + '...');
-        window.location.href = url;
-      }
+      RandomImage.getUrl(function(url){
+        if (typeof url === 'undefined') {
+          console.log('Image URL undefined!');
+        } else {
+          console.log('Redirecting to ' + url + '...');
+          window.location.href = url;
+        }
+      });
     </script>
   </head>
 </html>
