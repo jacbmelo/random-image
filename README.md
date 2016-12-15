@@ -20,4 +20,4 @@ You can use it through https://jacbmelo.github.io/random-image/ or you can use i
     
 ## Copyright and license
 
-Code and documentation copyright 2016 [jacbmelo](https://github.com/jacbmelo). Code released under [the MIT license](LICENSE.txt). 
+Code and documentation copyright 2016 [jacbmelo](https://github.com/jacbmelo). Code released under [the MIT license](LICENSE). 
