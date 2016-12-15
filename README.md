@@ -6,7 +6,9 @@ Returns a random image from a predefined url list.
 
 You can use it through https://jacbmelo.github.io/random-image/ or you can use it from JavaScript:
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" 
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" 
+            crossorigin="anonymous"></script>
     <script src="https://jacbmelo.github.io/random-image/random-image.js"></script>
     <script>
       RandomImage.getUrl(function(url){
