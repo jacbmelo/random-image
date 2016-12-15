@@ -13,17 +13,16 @@
   
   // Methods
   var RandomImage = {
-    url: undefined,
-    
-    getUrl:function() {
+    getUrl:function(callback) {
       var jqxhr = $.getJSON('data.json').done(function(data) {
-        RandomImage.url = data[Math.floor(Math.random() * data.length)];
+        var url = data[Math.floor(Math.random() * data.length)];
+        console.log('url: ' + url);
+        callback(url);
       }).fail(function(jqXHR, textStatus, errorThrown) {
         console.log(jqXHR);
         console.log(textStatus);
         console.log(errorThrown);
       }).always(function() {});
-      return RandomImage.url;
     }
   }
 
