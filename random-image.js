@@ -13,8 +13,9 @@
   
   // Methods
   var RandomImage = {
+    url: ,
+    
     getUrl:function() {
-      var url;
       var jqxhr = $.getJSON('data.json').done(function(data) {
         this.url = data[Math.floor(Math.random() * data.length)];
       }).fail(function(jqXHR, textStatus, errorThrown) {
@@ -22,7 +23,7 @@
         console.log(textStatus);
         console.log(errorThrown);
       }).always(function() {});
-      return url;
+      return this.url;
     }
   }
 
