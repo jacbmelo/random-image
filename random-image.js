@@ -22,17 +22,26 @@
   var RandomImage = {
     
     /**
-     * Gets a random image URL from data.json and calls a callback function with this URL.
+     * Gets a random image object from data.json and calls a callback function with this URL.
      */
-    getUrl: function(callback) {
+    getImage: function(callback) {
       $.getJSON('data.json').done(function(data) {
-        var url = data[Math.floor(Math.random() * data.length)];
-        callback(url);
+        var o = data[Math.floor(Math.random() * data.length)];
+        callback(o);
       }).fail(function(jqXHR, textStatus, errorThrown) {
         console.log(jqXHR);
         console.log(textStatus);
         console.log(errorThrown);
       }).always(function() {});
+    },
+
+    /**
+     * Gets a random image URL from data.json and calls a callback function with this URL.
+     */
+    getUrl: function(callback) {
+      getImage(function(o) {
+        callback(o.url);
+      })
     }
   }
 
